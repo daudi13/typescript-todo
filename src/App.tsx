@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Inputfield from './components/Inputfield';
 
@@ -65,7 +65,10 @@ import Inputfield from './components/Inputfield';
 
 // let lotsOfPeople: Person[];
 
-const  App: React.FC = () => {
+const App: React.FC = () => {
+
+  const [todo, setTodo] = useState<string>("")
+
   return (
     <div className="App">
       <span className='heading'>Taskify</span>
