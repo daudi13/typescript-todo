@@ -1,14 +1,23 @@
 import React from 'react';
+import { Todo } from './model';
+import { AiFillEdit } from 'react-icons/ai';
 
 interface Props {
-  todo: string;
+  todo: Todo;
+  todos: Todo[];
+  setTodos: React.Dispatch<React.SetStateAction<Todo[]>>; 
 }
 
-const SingleTodo: React.FC<Props> = ({todo}) => {
+const SingleTodo: React.FC<Props> = ({todo, todos, setTodos}) => {
   return (
-    <div>
-      
-    </div>
+    <form className="todos__single">
+      <span className="todos__single--text">{todo.todo}</span>
+      <div>
+        <span className="icon">
+          <AiFillEdit />
+        </span>
+      </div>
+    </form>
   )
 }
 

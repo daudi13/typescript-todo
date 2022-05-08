@@ -73,7 +73,7 @@ const App: React.FC = () => {
   const [todos, setTodos] = useState<Todo[]>([]); 
 
   const handleAdd = (e: React.FormEvent) => {
-    e.preventDefault()
+    e.preventDefault();
 
     if (todo) {
       setTodos([...todos, { id: Date.now(), todo, isDone: false }]);
