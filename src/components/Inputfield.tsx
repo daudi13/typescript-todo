@@ -4,11 +4,12 @@ import './Inputfield.css';
 interface Props {
   todo: string;
   setTodo: React.Dispatch<React.SetStateAction<string>>;
+  handleAdd: () => void;
 }
 
-const Inputfield:React.FC<Props> = ({todo, setTodo}) => {
+const Inputfield:React.FC<Props> = ({todo, setTodo, handleAdd}) => {
   return (  
-    <form className='input'>
+    <form className='input' onSubmit={handleAdd}>
       <input
         className="input__box"
         type="input"

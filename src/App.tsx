@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import Inputfield from './components/Inputfield';
+import { Todo } from './components/model';
 
 
 // let name: string;
@@ -68,13 +69,18 @@ import Inputfield from './components/Inputfield';
 const App: React.FC = () => {
 
   const [todo, setTodo] = useState<string>("");
+  const [todos, setTodos] = useState<Todo[]>([]); 
+
+  const handleAdd = () => {
+
+  }
 
   console.log(todo)
 
   return (
     <div className="App">
       <span className='heading'>Taskify</span>
-      <Inputfield todo={todo} setTodo={setTodo}/>
+      <Inputfield todo={todo} setTodo={setTodo} handleAdd={handleAdd}/>
     </div>
   );
 }
