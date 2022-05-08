@@ -85,7 +85,12 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <span className='heading'>Taskify</span>
-      <Inputfield todo={todo} setTodo={setTodo} handleAdd={handleAdd}/>
+      <Inputfield todo={todo} setTodo={setTodo} handleAdd={handleAdd} />
+      {
+        todos.map((t) => (
+          <li>{t.todo}</li>
+        ))
+      }
     </div>
   );
 }
