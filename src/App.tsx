@@ -1,35 +1,73 @@
 import React from 'react';
 import './App.css';
-let name: string;
-let age: number;
-let isStudent: boolean;
-let hobbies: string[];
-let role: [number, string];
-let theAge: number | string;
 
-theAge = 4;
 
-const printName =( name: string) => {
-  console.log(name)
-}
+// let name: string;
+// let age: number;
+// let isStudent: boolean;
+// let hobbies: string[];
+// let role: [number, string];
+// let theAge: number | string;
 
-printName('daudi')
+// let printName: (name: string) => void;
 
-type Person = {
-  name: string;
-  age?: number;
-};
+// theAge = 4;
 
-let Person: Person = {
-  name: "Daudi",
-};
+// const printName =( name: string) => {
+//   console.log(name)
+// }
 
-let lotsOfPeople: Person[];
+// printName('daudi')
 
-function App() {
+// type X = {
+//   name: string;
+//   age: number;
+// }
+
+// type Y = X & {
+//   proffesion: string;
+//   isRetired: boolean;
+// }
+
+// let y: Y = {
+//   proffesion: "messuse",
+// isRetired: false,
+// name: 'daudi',
+// age: 44,
+// }
+
+// interface X {
+//   name: String;
+//   age: number;
+// }
+
+// interface Y extends X {
+//   proffession: 'messuse';
+//   isRetired: false;
+// }
+
+// let y: Y = {
+//   proffession: "messuse",
+//   isRetired: false,
+//   name: 'daudi',
+//   age: 44,
+// }
+
+// type Person = {
+//   name: string;
+//   age?: number;
+// };
+
+// let Person: Person = {
+//   name: "Daudi",
+// };
+
+// let lotsOfPeople: Person[];
+
+const  App: React.FC = () => {
   return (
     <div className="App">
-      Hello world
+      <span className='heading'>Taskify</span>
     </div>
   );
 }
